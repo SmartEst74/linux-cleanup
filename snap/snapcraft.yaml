@@ -19,9 +19,13 @@ description: |
   - Dry-run mode for safe preview
 
 license: MIT
+contact:
+  - linux_cleanup@it1st.com
 source-code: https://github.com/SmartEst74/linux-cleanup
 issues: https://github.com/SmartEst74/linux-cleanup/issues
 website: https://github.com/SmartEst74/linux-cleanup
+donation:
+  - https://github.com/sponsors/SmartEst74
 
 grade: stable
 confinement: classic

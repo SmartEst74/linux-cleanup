@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Linux Cleanup
+Comment=Linux disk cleanup utility with visual analysis
+Exec=linux-cleanup
+Icon=${SNAP}/meta/gui/icon.png
+Terminal=true
+Type=Application
+Categories=System;

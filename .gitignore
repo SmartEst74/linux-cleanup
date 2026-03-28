@@ -1,1 +1,7 @@
-/target
+/target/
+/parts/
+/prime/
+/stage/
+*.snap
+*.swp
+.DS_Store

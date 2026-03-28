@@ -8,7 +8,7 @@ A Rust-based Linux disk cleanup utility with an interactive TUI interface, packa
 cargo build --release    # Release build
 cargo test              # Run all 41 tests
 cargo build             # Debug build (faster)
-snapcraft               # Build snap package
+snapcraft               # Build snap package (from project root)
 ```
 
 ## Run Commands
@@ -55,3 +55,10 @@ PackageCache, SystemdJournals, TempFiles, Docker, Logs, UserCache, BrowserCache,
 - Pseudo-filesystems (/proc, /sys, /dev, /run) are excluded from scanning
 - Snap revisions detected via `snap list --all` command output parsing
 - Distro detection via `/etc/os-release` and `which` for package managers
+
+## Snap Packaging
+
+Snap config is in `snap/snapcraft.yaml`. The snap uses classic confinement for full filesystem access.
+
+Contact: linux_cleanup@it1st.com
+Source: https://github.com/SmartEst74/linux-cleanup
