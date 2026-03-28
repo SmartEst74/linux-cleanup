@@ -33,6 +33,11 @@ confinement: classic
 apps:
   linux-cleanup:
     command: bin/linux-cleanup
+    plugs:
+      - home
+      - system-observe
+      - opengl
+      - x11
 
 parts:
   linux-cleanup:
