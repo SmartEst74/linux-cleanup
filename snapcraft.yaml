@@ -1,0 +1,34 @@
+name: linux-cleanup
+base: core22
+version: '0.1.0'
+summary: Linux disk cleanup with visual analysis
+description: |
+  A terminal-based disk cleanup utility that helps you quickly find and
+  safely remove unnecessary files from your Linux system.
+
+  Features:
+  - Visual disk space analysis with pie charts
+  - Categorized cleanup items: SAFE, REVIEW, RISKY
+  - Auto-detection of distro and package manager
+  - Support for apt, dnf, pacman, zypper, yum
+  - Snap, Flatpak, Docker cleanup detection
+  - Old kernel and log rotation detection
+  - Interactive TUI with toggle selection
+  - CLI mode for scripting and automation
+  - Dry-run mode for safe preview
+
+grade: stable
+confinement: classic
+
+apps:
+  linux-cleanup:
+    command: bin/linux-cleanup
+
+parts:
+  linux-cleanup:
+    plugin: rust
+    source: .
+    rust-features: []
+    build-packages:
+      - gcc
+      - pkg-config

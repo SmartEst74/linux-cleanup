@@ -1,0 +1,20 @@
+[package]
+name = "linux-cleanup"
+version = "0.1.0"
+edition = "2021"
+description = "Friendly Linux disk cleanup utility with visual space analysis"
+license = "MIT"
+
+[[bin]]
+name = "linux-cleanup"
+path = "src/main.rs"
+
+[dependencies]
+ratatui = "0.28"
+crossterm = "0.28"
+walkdir = "2"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+sysinfo = "0.32"
+humansize = "2"
+indicatif = "0.17"
