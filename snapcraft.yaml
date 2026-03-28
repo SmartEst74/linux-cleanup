@@ -1,4 +1,5 @@
 name: linux-cleanup
+title: Linux Cleanup
 base: core22
 version: '0.1.0'
 summary: Linux disk cleanup with visual analysis
@@ -17,6 +18,11 @@ description: |
   - CLI mode for scripting and automation
   - Dry-run mode for safe preview
 
+license: MIT
+source-code: https://github.com/SmartEst74/linux-cleanup
+issues: https://github.com/SmartEst74/linux-cleanup/issues
+website: https://github.com/SmartEst74/linux-cleanup
+
 grade: stable
 confinement: classic
 
@@ -28,7 +34,6 @@ parts:
   linux-cleanup:
     plugin: rust
     source: .
-    rust-features: []
     build-packages:
       - gcc
       - pkg-config
