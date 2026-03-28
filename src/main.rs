@@ -1,5 +1,6 @@
 mod cleanup;
 mod distro;
+mod gui;
 mod safety;
 mod scanner;
 mod tui;
@@ -40,10 +41,19 @@ pub struct Args {
     /// CLI-only mode: scan and print results, no TUI
     #[arg(long)]
     pub scan_only: bool,
+
+    /// Launch graphical interface
+    #[arg(long)]
+    pub gui: bool,
 }
 
 fn main() -> Result<()> {
     let args = Args::parse();
+
+    if args.gui {
+        gui::run();
+        return Ok(());
+    }
 
     if args.auto_clean {
         return cleanup::run_auto_clean(&args);

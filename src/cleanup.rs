@@ -6,6 +6,7 @@ use anyhow::Result;
 use std::path::Path;
 use std::process::Command;
 
+#[derive(Debug, Clone)]
 pub struct CleanupAction {
     pub description: String,
     pub command: String,
