@@ -1,16 +1,17 @@
 # Linux Cleanup
 
-A Rust-based Linux disk cleanup utility with an interactive TUI interface, packaged as a snap for distribution.
+A Rust-based Linux disk cleanup utility with an interactive TUI and native GUI window, packaged as a snap for distribution.
 
 ## Features
 
-- Visual disk space analysis with pie charts
+- Visual disk space analysis with pie charts and progress bars
 - Categorized cleanup items: SAFE, REVIEW, RISKY
 - Auto-detection of distro and package manager
 - Support for apt, dnf, pacman, zypper, yum
 - Snap, Flatpak, Docker cleanup detection
 - Old kernel and log rotation detection
 - Interactive TUI with toggle selection
+- Native GUI window (egui) for desktop users
 - CLI mode for scripting and automation
 - Dry-run mode for safe preview
 
@@ -20,7 +21,6 @@ A Rust-based Linux disk cleanup utility with an interactive TUI interface, packa
 
 - Rust 1.70+ (with cargo)
 - For full system scan: `sudo` privileges
-- For snap build: `snapcraft` installed
 
 ### Build Commands
 
@@ -35,10 +35,13 @@ cargo build --release
 # Run all tests (41 tests)
 cargo test
 
-# Run the TUI
+# Run the native GUI window
+sudo ./target/release/linux-cleanup --gui
+
+# Run the TUI (terminal interface)
 sudo ./target/release/linux-cleanup
 
-# CLI scan report (no TUI)
+# CLI scan report (no GUI)
 ./target/release/linux-cleanup --scan-only --path /
 
 # Preview cleanups (dry run)
