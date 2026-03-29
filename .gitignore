@@ -3,6 +3,7 @@
 /prime/
 /stage/
 /overlay/
+/dist/
 *.snap
 *.swp
 .DS_Store
